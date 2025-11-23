@@ -4,7 +4,7 @@ import { Octokit } from "octokit";
 import { auth } from "./auth";
 import { headers } from "next/headers";
 
-async function createCodespace() {
+export async function createCodespace() {
   const headersList = await headers();
 
   const { accessToken } = await auth.api.getAccessToken({
