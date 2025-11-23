@@ -4,6 +4,9 @@ import { authClient } from "@/lib/auth-client";
 
 export default function Home() {
   const session = authClient.useSession();
+  if (session.isPending) {
+    return <div>Loading...</div>;
+  }
   if (session.data?.user) {
     return <div>Signed in as {session.data.user.name}</div>;
   }
