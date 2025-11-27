@@ -1,12 +1,12 @@
-from node:22-alpine
+FROM node:22-alpine
 
-workdir /app
+WORKDIR /app
 
-copy . .
+COPY . .
 
-run bun install
-run bun run build
+RUN bun install
+RUN bun run build
 
-expose 3000
+EXPOSE 3000
 
-cmd ["bun", "run", "dev"]
+CMD ["bun", "run", "dev"]
