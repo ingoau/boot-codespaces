@@ -1,6 +1,4 @@
 {
   "forwardPorts": [3000],
-  "build": {
-    "dockerfile": "Dockerfile"
-  }
+  "postStartCommand": "bun install && bun run build && bun run dev"
 }
