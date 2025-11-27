@@ -1,4 +1,4 @@
 {
-  "onCreateCommand": "bun install && bun run build && bun run start",
+  "postStartCommand": "bun install && bun run build && bun run start",
   "forwardPorts": [3000]
 }
